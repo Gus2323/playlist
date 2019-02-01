@@ -1,35 +1,84 @@
-/* global $ */
+var songs = [
+    "Some Way",
+    "Myself",
+    "Up",
+    "Candy Paint"
+];
 
-// BELOW Update the songs array with four of your favorites songs.
-var songs = [];
-// BELOW Add 4 More arrays to store images_links, artists, song lengths, and links for each song
-// Make sure they match the same order as your array above
+var artists = [
+    "NAV",
+    "NAV",
+    "NAV",
+    "Post Malone"
+];
 
+var images = [
+    "http://exclaim.ca/images/NavSomeWayVid.jpg",
+    "https://i.ytimg.com/vi/f9gfqGoPGaU/maxresdefault.jpg",
+    "https://images.genius.com/02794f15f7d5ae41cd9b27aba4803bb8.500x500x1.jpg",
+    "https://upload.wikimedia.org/wikipedia/en/thumb/d/d5/PostMaloneCandyPaint.jpg/220px-PostMaloneCandyPaint.jpg"
+];
 
+var links = [
+    "https://www.youtube.com/watch?v=f9gfqGoPGaU",
+    "https://www..com/watch?v=KRaPykuwCiw",
+    "https://www.youtube.com/watch?v=0GP7LJxFN84",
+    "https://www.youtube.com/watch?v=aJGaZbRL1y0"
+];
+
+var lengths = [
+    "03:50",
+    "03:11",
+    "03:41",
+    "03:48"
+];
 
 function displaySongInfo(){
-    // BELOW Use forEach Loop to display the data from each of your arrays in the correct div
+    images.forEach(function(image) {
+        $("#images").append("<img src='" + image + "'>");   
+    });
 
+    songs.forEach(function(song) {
+        $("#songs").append("<p>" + song + "</p>"); 
+    });
+
+    artists.forEach(function(artist) {
+        $("#artists").append("<p> By: " + artist + "</p>");   
+    });
+
+    lengths.forEach(function(length) {
+        $("#lengths").append("<p>" + length + "</p>"); 
+    });
+
+    links.forEach(function(link) {
+        $("#links").append("<a href='" + link + "'> Listen </a>"); 
+    });
 }
 
 function emptySongInfo(){
+    $("#images").empty();
     $("#songs").empty();
-    // Use jQuery to empty all of the remaining divs
-
-
-}
-
-
-function addSongInfo(){
-    // BELOW write the code to add new items to each of the arrays.
-
-
+    $("#artists").empty();
+    $("#lengths").empty();
+    $("#links").empty();
 }
 
 $("#add").click(function() {
-    emptySongInfo();
-    addSongInfo();
+    var songName = $("#song").val();
+    var imageUrl = $("#image").val();
+    var artistName = $("#artist").val();
+    var songLength = $("#length").val();
+    var link = $("#links").val();
+
+    songs.push(songName);
+    artists.push(artistName);
+    images.push(imageUrl);
+    lengths.push(songLength);
+    links.push(link);
+
+    emptySongInfo()
     displaySongInfo();
 });
 
 displaySongInfo();
+
