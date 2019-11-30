@@ -1,5 +1,5 @@
 var songs = [
-    "Some Way",
+    "La La Land",
     "Myself",
     "Up",
     "Candy Paint"
@@ -13,7 +13,7 @@ var artists = [
 ];
 
 var images = [
-    "http://exclaim.ca/images/NavSomeWayVid.jpg",
+    "https://upload.wikimedia.org/wikipedia/en/thumb/b/b1/Bryce_Vine_-_La_La_Land.png/220px-Bryce_Vine_-_La_La_Land.png",
     "https://i.ytimg.com/vi/f9gfqGoPGaU/maxresdefault.jpg",
     "https://images.genius.com/02794f15f7d5ae41cd9b27aba4803bb8.500x500x1.jpg",
     "https://upload.wikimedia.org/wikipedia/en/thumb/d/d5/PostMaloneCandyPaint.jpg/220px-PostMaloneCandyPaint.jpg"
@@ -27,7 +27,7 @@ var links = [
 ];
 
 var lengths = [
-    "03:50",
+    "02: 37",
     "03:11",
     "03:41",
     "03:48"
